@@ -110,9 +110,6 @@ if (!isset($_SESSION['fb_access_token'] )) {
 			<div class="responsive_menu">
 				<ul>
 					<li><a class="show-1 templatemo_home" href="#">User's Profile</a></li>
-					<!--<li><a class="show-3 templatemo_page3" href="#">Usage</a></li>-->
-					<!--<li><a class="show-4 templatemo_page4" href="#">About</a></li>-->
-					<!--<li><a class="show-5 templatemo_page5" href="#">Contact</a></li>-->
 					<li><a href="<?php echo $_SERVER['PHP_SELF'].'?logout'?>">Sign-out</a></li>
 				</ul>
 			</div>
@@ -122,17 +119,16 @@ if (!isset($_SESSION['fb_access_token'] )) {
 						<a href="#" class="menu-toggle-btn">
 				            <i class="fa fa-bars"></i>
 				        </a>
-					</div> <!-- /.col-md-12 -->
+					</div>
 					<div class="col-md-12 main_menu">
 						<ul>
 							<li><a class="show-1 templatemo_home" href="#">User's Profile</a></li>
-							<!--<li><a class="show-5 templatemo_page5" href="#">Contact</a></li>-->
 							<li><a href="<?php echo $_SERVER['PHP_SELF'].'?logout'?>">Sign-out</a></li>
 						</ul>
-					</div> <!-- /.col-md-12 -->
-				</div> <!-- /.row -->
-			</div> <!-- /.container -->
-		</div> <!-- /.main-navigation -->
+					</div>
+				</div>
+			</div>
+		</div> 
 
 		<div class="container">
 			<br/>
@@ -248,8 +244,6 @@ if (!isset($_SESSION['fb_access_token'] )) {
 							<div class="product-item">
 								<div class="gallery-item">
 									<div class="overlay">
-										<!-- Old Slideshow -->
-										<!-- <a href="<?php //echo 'slideshow.php?album_id='.$album['id']; ?>" class="fa fa-expand"></a> -->
 										<a href="<?php echo 'slideshow2.php?album_id='.$album['id']; ?>" class="fa fa-expand"></a>
 										
 									</div>	
@@ -272,27 +266,27 @@ if (!isset($_SESSION['fb_access_token'] )) {
 								</label>
 								<button id="<?php echo $album['id'].','.$album['name']; ?>" data-toggle="tooltip" title="Download this album" class="btn button album_download_btn">Download</button>
 								<button id="<?php echo $album['id'].','.$album['name']; ?>" data-toggle="tooltip" title="Move this album" class="btn button album_move_btn">Move to Drive</button>
-							</div> <!-- /.product-item -->
-						</div> <!-- /.col-md-4 -->		
+							</div> 
+						</div> 
 							<?php
 						}
 					?>
-					</div> <!-- /.row -->
-			</div> <!-- /.slide-item -->
-		</div> <!-- /.products -->
+					</div>
+			</div>
+		</div>
 
 
-	</div> <!-- /#menu-container -->
+	</div>
 
 	<div id="templatemo_footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<p>&copy; <script type="text/javascript"> document.write(new Date().getFullYear()); </script> The Vende. All Rights Reserved. Developed by <a href="https://technoupdt.blogspot.in/" target="blank">Bansi Nakhuva</a></p>
-				</div> <!-- /.col-md-12 -->
-			</div> <!-- /.row -->
-		</div> <!-- /.container -->
-	</div> <!-- /.templatemo_footer -->
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Scripts -->
 	<script src="libs/js/jquery-1.10.2.min.js"></script>
