@@ -3,7 +3,7 @@ if (!session_id()) {
     session_start();
 }
 if (!isset($_SESSION['fb_access_token'] )) {
-	header('location: http://'.$_SERVER['HTTP_HOST'].'/fbd/index.php');
+	header('location: https://'.$_SERVER['HTTP_HOST'].'/index.php');
 	exit;
 }
 include 'fb_config.php';
@@ -121,7 +121,7 @@ if(isset($_GET['single']) && !empty($_GET['single'])) {
 	}
 	make_zip();
 } else {
-	header('location: http://'.$_SERVER['HTTP_HOST'].'/fbd/profile.php');
+	header('location: https://'.$_SERVER['HTTP_HOST'].'/profile.php');
 	exit;
 }
 ?>

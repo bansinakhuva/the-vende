@@ -3,7 +3,7 @@ if (!session_id()) {
     session_start();
 }
 if (!isset($_SESSION['fb_access_token'] )) {
-	header('location: http://' . $_SERVER['HTTP_HOST'] . '/fbd/index.php');
+	header('location: https://' . $_SERVER['HTTP_HOST'] . '/index.php');
 	exit;
 }
 include 'fb_config.php';

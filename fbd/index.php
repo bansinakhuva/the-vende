@@ -3,7 +3,7 @@ if (!session_id()) {
     session_start();
 }
 if (isset($_SESSION['fb_access_token'] )) {
-	header('location: http://'.$_SERVER['HTTP_HOST'].'/fbd/profile.php');
+	header('location: https://'.$_SERVER['HTTP_HOST'].'/profile.php');
 	exit;
 }
 ?>
@@ -39,7 +39,7 @@ if (isset($_SESSION['fb_access_token'] )) {
 					'email',
 					'user_photos'
 				);
-				$loginUrl = $helper->getLoginUrl('http://'.$_SERVER['HTTP_HOST'].'/fbd/profile.php', $permissions);
+				$loginUrl = $helper->getLoginUrl('https://'.$_SERVER['HTTP_HOST'].'/profile.php', $permissions);
 			?>
 			<a href="<?php echo $loginUrl; ?>" class="button" style="vertical-align:middle"><span>Login With Facebook! </span></a>
 		</div>

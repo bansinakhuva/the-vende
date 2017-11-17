@@ -9,7 +9,7 @@ $helper = $fb->getRedirectLoginHelper();
 
 if(isset($_GET['logout']))
 {
-	$fbLogoutUrl = $helper->getLogoutUrl($_SESSION['fb_access_token'], 'http://'.$_SERVER['HTTP_HOST'].'/fbd/index.php');    
+	$fbLogoutUrl = $helper->getLogoutUrl($_SESSION['fb_access_token'], 'https://'.$_SERVER['HTTP_HOST'].'/index.php');    
 	session_destroy();
 	unset($_SESSION['access_token']);
 	header("Location: $fbLogoutUrl");

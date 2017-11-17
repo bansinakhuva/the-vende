@@ -4,7 +4,7 @@ if (!session_id()) {
 }
 ini_set('max_execution_time', 300);
 if (!isset($_SESSION['fb_access_token'] )) {
-	header('location: https://'.$_SERVER['HTTP_HOST'].'/fbd/index.php');
+	header('location: https://'.$_SERVER['HTTP_HOST'].'/index.php');
 	exit;
 }
 include 'fb_config.php';
@@ -72,7 +72,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 	$client->setAccessToken($_SESSION['access_token']);
 	if ($client->isAccessTokenExpired()) {
 		echo "Session Expired. Logout and Login Again to Google";
-		echo '<script type="text/javascript">window.open("https://' . $_SERVER['HTTP_HOST'] . '/fbd/oauth2callback.php", "Drive Access", width="700", height="380");</script>';
+		echo '<script type="text/javascript">window.open("https://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php", "Drive Access", width="700", height="380");</script>';
 		exit;
 	}
 	$drive = new Google_Service_Drive($client);
@@ -115,12 +115,12 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 		}
 		echo "success!";
 	} else {
-		header('location: https://'.$_SERVER['HTTP_HOST'].'/fbd/profile.php');
+		header('location: https://'.$_SERVER['HTTP_HOST'].'/profile.php');
 		exit;
 	}
 
 } else {
 	echo "Please Login First";
-	echo '<script type="text/javascript">window.open("https://' . $_SERVER['HTTP_HOST'] . '/fbd/oauth2callback.php", "Drive Access", width="700", height="380");</script>';
+	echo '<script type="text/javascript">window.open("https://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php", "Drive Access", width="700", height="380");</script>';
 }
 ?>
