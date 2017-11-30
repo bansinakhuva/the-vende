@@ -47,7 +47,8 @@ function photo_download($album_id, $album_name)
 		// exit;
 	do{
 		foreach ($photos as $photo) {
-			copy($photo['source'],$album_location.'/'.uniqid().".jpg");
+			file_put_contents( $album_location.'/'.uniqid().".jpg", url_get_contents( $photo['source']) );
+			//copy($photo['source'],$album_location.'/'.uniqid().".jpg");
 			//echo $photo[source];
 		}
 		$photos = $fb->next($photos);
