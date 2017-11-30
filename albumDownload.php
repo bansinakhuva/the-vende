@@ -36,7 +36,7 @@ function photo_download($album_id, $album_name)
 		echo 'Facebook SDK returned an error: ' . $e->getMessage();
 		exit;
 	}
-	//echo "<pre>"; print_r($photos); exit;
+	echo "<pre>"; print_r($photos); exit;
 	$album_location = $download_location.$album_name;
 	
 	if (!file_exists($album_location)) {		
