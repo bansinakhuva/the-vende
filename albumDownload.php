@@ -42,9 +42,9 @@ function photo_download($album_id, $album_name)
 	if (!file_exists($album_location)) {		
 		mkdir($album_location, 0777);
 	}
-		 echo "<pre>";
-		 print_r($arr);
-		 exit;
+		// echo "<pre>";
+		// print_r($arr);
+		// exit;
 	do{
 		foreach ($photos as $photo) {
 			file_put_contents( $album_location.'/'.uniqid().".jpg", url_get_contents( $photo['source']) );
