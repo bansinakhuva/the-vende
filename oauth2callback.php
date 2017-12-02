@@ -1,5 +1,5 @@
 <?php
-require_once 'libs/SDK/google/vendor/autoload.php';
+require_once '/vendor/autoload.php';
 session_start();
 
 $client = new Google_Client();
