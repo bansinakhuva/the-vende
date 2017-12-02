@@ -27,7 +27,8 @@ function photo_download($album_id, $album_name)
 	global $fb;
 	global $download_location;
 	try {
-		$photos_request = $fb->get('/'.$album_id.'/photos?fields=source');
+		//$photos_request = $fb->get('/'.$album_id.'/photos?fields=source');
+		$photos_request = $fb->get('/'.$album_id.'?fields=name,photos.limit(100){images,name,created_time}');
 		$photos = $photos_request->getGraphEdge();
 	} catch(Facebook\Exceptions\FacebookResponseException $e) {
 		echo 'Graph returned an error: ' . $e->getMessage();
