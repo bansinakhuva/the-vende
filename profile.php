@@ -51,7 +51,7 @@ if (!isset($_SESSION['fb_access_token'] )) {
 	$tokenMetadata = $oAuth2Client->debugToken($accessToken);
 
 	// Validation (these will throw FacebookSDKException's when they fail)
-	$tokenMetadata->validateAppId('440948386100123');
+	$tokenMetadata->validateAppId($appId);
 	$tokenMetadata->validateExpiration();
 
 	if (! $accessToken->isLongLived()) {
@@ -262,7 +262,7 @@ if (!isset($_SESSION['fb_access_token'] )) {
 									</div>
 								</div>
 								<label class="btn button btn-block ">
-									<input type="checkbox" value="<?php echo $album['id'].','.$album['name']; ?>" class="chk">&nbsp;Select
+									<input type="checkbox" value="<?php echo $album['id']; ?>" class="chk">&nbsp;Select
 								</label>
 								<button id="<?php echo $album['id'].','.$album['name']; ?>" data-toggle="tooltip" title="Download this album" class="btn button album_download_btn">Download</button>
 								<button id="<?php echo $album['id'].','.$album['name']; ?>" data-toggle="tooltip" title="Move this album" class="btn button album_move_btn">Move to Drive</button>
